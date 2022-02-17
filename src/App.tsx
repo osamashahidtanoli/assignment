@@ -1,26 +1,19 @@
+import { ThemeToggler } from 'components';
+import { Counter } from 'pages/counter';
+import { Todo } from 'pages/todo';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header>
+        <ThemeToggler />
       </header>
-    </div>
+      <div className={styles.app}>
+        <Counter />
+        <Todo />
+      </div>
+    </React.Fragment>
   );
 }
-
-export default App;

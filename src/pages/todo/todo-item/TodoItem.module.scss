@@ -1,0 +1,11 @@
+.card {
+  border: 1px solid var(--sass-color-primary);
+}
+
+.card:hover {
+  box-shadow: var(--sass-card-box-shadow);
+}
+
+.container {
+  padding: 2px 16px;
+}
