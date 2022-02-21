@@ -1,4 +1,59 @@
-.wrapper {
-  border: 1px dotted var(--sass-color-primary);
-  padding: 1rem;
+$boxcolor: #fff;
+$textcolor: #7b7b7b;
+$addBtn: #FFBA74;
+
+
+
+.todoWrapper{
+ display: grid;
+ min-height: 100vh;
+ width: 100%;
+ place-items: center;
 }
+
+.todoBox{
+  min-height: 430px;
+  width: 360px;
+  background-color: $boxcolor;
+  border-radius: 10px;
+  position: relative;
+}
+
+.navTodo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navItems{
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #FAFAFA;
+  color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active{
+  color: #AE8BD2;
+  background-color: $boxcolor;
+}
+
+.addBtn{
+  background-color: #FFBA74;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  font-size: 1.4rem;
+  font-family: none;
+  position: absolute;
+  bottom: -31px;
+  left: 44%;
+  font-weight: bold;
+  &:hover{
+    background-color: #9D72C9;
+  }
+}
+

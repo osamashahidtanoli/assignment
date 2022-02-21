@@ -43,7 +43,7 @@ body {
   min-height: 100vh;
   word-wrap: break-word;
   color: var(--sass-color-text-main);
-  background: var(--sass-color-background-body);
+  background: linear-gradient(140deg, #FDBFC1, #9D72C9);
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }

@@ -1,6 +1,8 @@
 import { Box } from 'components';
 import { Todo } from '../types';
 import styles from './TodoItem.module.scss';
+import { useAppSelector, useAppDispatch } from 'core/store';
+import { changeStatus } from '../slice';
 
 export type Props = {
   item: Todo;
@@ -8,21 +10,25 @@ export type Props = {
 
 export default function TodoItem(props: Props) {
   const { item } = props;
+  const dispatch = useAppDispatch();
+  const statusChangeHandler = (e:any) => {
+    if(e.target.checked){
+      dispatch(changeStatus(item.id))
+    }
+  }
 
   return (
     <Box key={item.id} className={styles.card}>
-      <Box className={styles.container}>
-        <p
-          style={{
-            fontSize: '0.8em',
+
+      <label className={styles.checkItems}>
+        <input checked={item.completed ? true : false} onClick={statusChangeHandler} type="checkbox" />
+        <p style={{
             textDecoration: item.completed ? 'line-through' : 'none',
           }}>
-          Title: {item.title}
+          {item.title}
         </p>
-        <small style={{ fontSize: '0.7em' }}>
-          Status: {item.completed ? 'Completed' : 'Not Completed'}
-        </small>
-      </Box>
+      </label>
+
     </Box>
   );
 }

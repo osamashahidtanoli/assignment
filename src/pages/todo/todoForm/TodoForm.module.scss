@@ -1,0 +1,21 @@
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.form input{
+    background-color: #fff;
+    width: 100%;
+    
+}
+
+.form button{
+    width: 100%;
+    background-color: #ffba74;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    &:hover{
+        background-color: #dbd5cf;
+    }
+}

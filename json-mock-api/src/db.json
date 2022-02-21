@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Call the dentist",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Schedule a dinner with peter",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Dailyui 43",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Call the wet",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Kate's birthday present",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Jogging",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "title": "Playing Cricket",
+      "completed": false
+    }
+   
+  ]
+}

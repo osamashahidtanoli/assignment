@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.4.2",
     "@reduxjs/toolkit": "^1.7.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
@@ -13,8 +14,10 @@
     "@types/react-dom": "^17.0.11",
     "axios": "^0.26.0",
     "classnames": "^2.3.1",
+    "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0",
     "redux-saga": "^1.1.3",
@@ -25,15 +28,15 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "eslint": "^8.9.0",
-    "prettier":"2.5.1",
     "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-prettier":"4.0.0",
-    "eslint-config-prettier":"8.3.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.4"
+    "lint-staged": "^12.3.4",
+    "prettier": "2.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,12 +44,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:eslint:fix": "eslint . --ext .ts,.js,.tsx,.jsx --fix",
-    "prettier-fix":"prettier --write ./src",
-    "lint-staged": "lint-staged"
+    "prettier-fix": "prettier --write ./src",
+    "lint-staged": "lint-staged",
+    "server": "json-server --watch json-mock-api/src/db.json --port 5000"
   },
   "eslintConfig": {
     "extends": "react-app"
-  }, 
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

@@ -1,11 +1,32 @@
-.card {
-  border: 1px solid var(--sass-color-primary);
+// .card {
+//   border: 1px solid var(--sass-color-primary);
+// }
+
+// .card:hover {
+//   box-shadow: var(--sass-card-box-shadow);
+// }
+
+// .container {
+//   padding: 2px 16px;
+// }
+
+.checkItems{
+  display: flex;
+  margin: 1rem 0;
+  padding: 0 0.8rem;
 }
 
-.card:hover {
-  box-shadow: var(--sass-card-box-shadow);
+.checkItems input{
+width: 10%;
+align-self: auto;
 }
 
-.container {
-  padding: 2px 16px;
+.checkItems p{
+  width: 89%;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color:#7b7b7b;
+  text-transform: capitalize;
+  margin-left: 0.4rem
 }
+
