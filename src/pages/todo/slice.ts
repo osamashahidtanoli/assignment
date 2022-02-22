@@ -25,18 +25,17 @@ const slice = createSlice({
       state.apiError = action.payload;
     },
     addNewTodo(state, action: PayloadAction<any>){
-      const newItem = action.payload;
-      state.items = [...state.items, newItem]
+      const newItemText = action.payload;
+      // state.items = [...state.items, newItem]
+      state.items?.push({
+        id: Math.floor(Math.random() * 100),
+        title: newItemText,
+        completed: false
+      })
     },
     changeStatus(state, action: PayloadAction<any>){
       const id = action.payload;
-      // const indexOfCompleted = state.items.findIndex((item) => item.id === id);
-      // const findItem = state.items.find((item) => item.id === id);
-      // console.log(indexOfCompleted)
-      // const completedItem = {...findItem, completed:true};
-      // state.items[indexOfCompleted] = completedItem;
-      // console.log(completedItem)
-      state.items.map((item) => item.id == id ? item.completed = true : item)
+      state.items.map((item) => item.id == id ? item.completed = !item.completed : item)
       
     }
   },
