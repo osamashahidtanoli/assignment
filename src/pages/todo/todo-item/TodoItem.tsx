@@ -21,15 +21,15 @@ export default function TodoItem(props: Props) {
       <label className={styles.checkItems}>
         <input
           checked={item.completed ? true : false}
-          onClick={statusChangeHandler}
+          onChange={statusChangeHandler}
           type="checkbox"
         />
-        <p
+        <span
           style={{
             textDecoration: item.completed ? 'line-through' : 'none',
           }}>
           {item.title}
-        </p>
+        </span>
       </label>
 
     </Box>

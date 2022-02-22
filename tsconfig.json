@@ -29,5 +29,5 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx"
-  ]
+, "src/pages/todo/slice.test.js", "src/testing.utils.js"  ]
 }

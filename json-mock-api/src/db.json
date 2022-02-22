@@ -2,8 +2,8 @@
   "todos": [
     {
       "id": 1,
-      "title": "Call the dentist",
-      "completed": true
+      "title": "Go to doctor",
+      "completed": false
     },
     {
       "id": 2,

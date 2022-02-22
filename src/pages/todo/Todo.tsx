@@ -6,9 +6,6 @@ import TodoForm from './todoForm/TodoForm';
 import { MdList, MdOutlineChecklistRtl } from 'react-icons/md';
 import React from 'react';
 
-
-
-
 export default function Todo() {
   const { items, completedItems } = useTodo();
   const [tab, setTab] = React.useState('one');
@@ -24,23 +21,19 @@ export default function Todo() {
             onClick={() => setTab('one')}
             className={`${styles.navItems}  ${
               tab === 'one' ? styles.active : ''
-              }`}>
+            }`}>
             <MdList />{' '}
           </div>
           <div
             onClick={() => setTab('two')}
             className={`${styles.navItems}  ${
               tab === 'two' ? styles.active : ''
-              }`}>
+            }`}>
             <MdOutlineChecklistRtl />
           </div>
         </div>
         {tab === 'one' && <TodoList items={items} />}
-        {tab === 'two' && (
-          <p>
-            <TodoList items={completedItems} />
-          </p>
-        )}
+        {tab === 'two' && <TodoList items={completedItems} />}
 
         <button
           onClick={() => setShow((prevState) => !prevState)}
